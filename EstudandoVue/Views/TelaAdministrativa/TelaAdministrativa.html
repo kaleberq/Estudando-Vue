@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+ <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="TelaAdminisrativa.css">
+    <title>Tela administrativa</title>
+    <script src ="https://unpkg.com/vue"></script>
+  </head>
+    <body>
+     <div id="app">
+         <gui-titulo titulo="Esse é meu titulo"></gui-titulo>
+         <p></p>
+
+     </div>
+
+     <script type="text/javascript">
+         Vue.component('gui-titulo', {
+             props:['titulo'] ,
+             template:'<h2>{{titulo}}</h2>'
+         });
+
+         var app = new Vue({
+
+           
+             el: "#app",
+             data: {
+                 meuTitulo:'Esse é meu titulo'
+             }
+          
+           
+                          })
+
+     </script>
+
+                    
+    </body>
+
+ </html>
