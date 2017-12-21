@@ -8,8 +8,14 @@
   </head>
     <body>
      <div id="app">
+         <p v-bind:title="title">titulo teste</p>
          <gui-titulo titulo="Esse é meu titulo"></gui-titulo>
-         <p></p>
+         <button v-if="!clicou" v-on:click="usuarioClicou">Salvar</button>
+         <button v-if="clicou" v-on:click="usuarioClicou">aguarde...</button>
+         <p>
+            <input type="text" v-model="usuario.nome" />
+         </p>
+         <p>Nome: {{usuario.nome}}</p>
 
      </div>
 
@@ -24,9 +30,17 @@
            
              el: "#app",
              data: {
-                 meuTitulo:'Esse é meu titulo'
-             }
-          
+                 meuTitulo: 'Esse é meu titulo',
+                 title: 'delicia cara',
+                 clicou: false,
+                 usuario: {nome:""}
+             },
+             methods: {
+                 usuarioClicou: function () {
+                     this.clicou = !this.clicou;
+                 }
+
+             } 
            
                           })
 
