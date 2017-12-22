@@ -1,4 +1,5 @@
 Em JS "" e '' é a mesma coisa
+
 Aula 1: 
 
 Vue e um framework progrecivo de JS.
@@ -42,6 +43,7 @@ titulo:"Teste com V-bind"
 )}
 
 </script>
+
 Aula 4: Condicional if e laço de repetção
 
 <div id="app">
@@ -71,6 +73,7 @@ registros: [-- receber um aray
 </script>
 
 Aula 5: Interações e métodos
+
 manipular eventos com vue
 
 <button v-if="!clicou" v-on:click="usuarioClicou">Salvar</button>
@@ -123,6 +126,35 @@ usasse a palavra reservada vue e o metodo para definir determinado component
         
         Vue.component('gui-titulo', {
             template: '<h2>Componente de titulo</h2>'
+        });
+         var app = new Vue({
+
+
+             el: "#app"
+             
+
+             
+
+                          })
+
+    </script>
+
+Aula 8: Personalizando com props
+
+Deixa component Dinamico, passar algumas informações na hora que o componente for usado.
+Mandar paramentro com props
+
+ <div id="app">
+       <gui-titulo titulo="Esse é meu titulo"></gui-titulo>
+
+ </div>
+
+<script type="text/javascript">
+        
+        Vue.component('gui-titulo', {
+            props: ['titulo'],
+            template:'<h2>{{titulo}}</h2>'
+            
         });
          var app = new Vue({
 
