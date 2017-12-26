@@ -139,7 +139,7 @@ usasse a palavra reservada vue e o metodo para definir determinado component
 
     </script>
 
-Aula 8: Personalizando com props
+Aula 8: Personalizando components com props
 
 Deixa component Dinamico, passar algumas informações na hora que o componente for usado.
 Mandar paramentro com props
@@ -167,3 +167,7 @@ Mandar paramentro com props
                           })
 
     </script>
+
+Aula 9: Props dinâmicos
+
+passar parâmetros dinâmicos para os componentes
