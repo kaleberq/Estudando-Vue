@@ -29,14 +29,13 @@ Teste com titulo</p>
 
 tornar atributo html em algo dinamico onde pode alterar a informação, usar uma variavel para manipular a informação.
 deve se usar a diretiva v-bind:title.
-<p v-bind:title="titulo> Teste com titulo"</p>
+<p v-bind:title="titulo"> Teste com titulo</p>
 
 <script type="text/javascript">
 
 var app = new Vue({
 el:#app,
 data{--> usado para criar variaveis do objeto
-msg:'Iniciando com Vue JS',
 titulo:"Teste com V-bind"
 }
 
@@ -171,3 +170,49 @@ Mandar paramentro com props
 Aula 9: Props dinâmicos
 
 passar parâmetros dinâmicos para os componentes
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="TelaAdminisrativa.css">
+    <title>Tela administrativa</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+   <div id="app">
+       <gui-titulo v-bind:titulo="meuTitulo"></gui-titulo>
+       <input v-model="meuTitulo"/>
+
+   </div>
+
+    <script type="text/javascript">
+        
+        Vue.component('gui-titulo', {
+            props: ['titulo'],
+            template:'<h2>{{titulo}}</h2>'
+            
+        });
+         var app = new Vue({
+
+
+             el: "#app",
+             data: {
+                 meuTitulo:"Esse é meu titulo"
+             }
+             
+
+             
+
+                          })
+
+    </script>
+
+
+</body>
+
+</html>
+
+Aula 10: Exemplo de componente de Tabela.
+
+
