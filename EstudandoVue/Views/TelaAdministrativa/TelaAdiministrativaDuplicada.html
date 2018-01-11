@@ -14,7 +14,8 @@
        <input v-model="meuTitulo"/>
 
        <gui-tabela v-bind:titulos="['Nome','E-mail','Link do cachorro']" v-bind:registros="registros"></gui-tabela>
-
+       <p v-once>{{meuTitulo}}</p>
+       <p v-html="html"></p>
        
 
    </div>
@@ -58,7 +59,8 @@
                      { titulo: 'Titulo 1', descricao: 'Descrição 1', link: 'delicia.com' },
                      { titulo: 'Titulo 2', descricao: 'Descrição 2', link: 'delicia.com' },
                      { titulo: 'Titulo 3', descricao: 'Descrição 3', link: 'delicia.com' }
-                 ]
+                 ],
+                 html:'<a href="#"> Esse é um link </a>'
              }
              
 
