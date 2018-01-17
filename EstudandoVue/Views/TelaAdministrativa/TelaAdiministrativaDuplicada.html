@@ -16,6 +16,7 @@
        <gui-tabela v-bind:titulos="['Nome','E-mail','Link do cachorro']" v-bind:registros="registros"></gui-tabela>
        <p v-once>{{meuTitulo}}</p>
        <p v-html="html"></p>
+       <p>{{ 245.464366 | TratarValor }}</p>
        
 
    </div>
@@ -61,7 +62,14 @@
                      { titulo: 'Titulo 3', descricao: 'Descrição 3', link: 'delicia.com' }
                  ],
                  html:'<a href="#"> Esse é um link </a>'
+             },
+             fiters: {
+                 TratarValor: function (valor) {
+                     return ('R$ ' + (valor).toFixed(2)).replace('.', ',')
+                 }
              }
+
+
              
 
              
